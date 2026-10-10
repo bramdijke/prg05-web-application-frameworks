@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ page_title }}</title>
+</head>
+<body>
+    <h1>{{ page_title }}</h1>
+
+    {% for blog in blogs %}
+        <article>
+            <h2>{{ blog.title }}</h2>
+            <p><em>door {{ blog.author }}</em></p>
+            <p>{{ blog.text }}</p>
+        </article>
+    {% empty %}
+        <p>Er zijn nog geen blogs.</p>
+    {% endfor %}
+</body>
+</html>
